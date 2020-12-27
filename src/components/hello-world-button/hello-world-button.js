@@ -1,14 +1,17 @@
 import './styles.scss';
 
 class HelloWorldButton {
+    buttonClass = 'hello-world-button';
+    textClass = 'hello-world-text';
+
     render() {
         const buttonElement = document.createElement('button');
         buttonElement.innerHTML = 'Hello World';
-        buttonElement.className = 'hello-world-button';
-        buttonElement.onclick = function () {
+        buttonElement.classList.add(this.buttonClass);
+        buttonElement.onclick = () => {
             const pElement = document.createElement('p');
             pElement.innerText = 'Hello World';
-            pElement.className = 'hello-world-text';
+            pElement.classList.add(this.textClass);
             const body = document.querySelector('body');
             body.appendChild(pElement);
         };
