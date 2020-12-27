@@ -2,17 +2,21 @@ $color-green: green;
 $color-white: white;
 
 .hello-world-button {
+    width: 200px;
     padding: 8px 12px;
-    color: $color-white;
+    color: white;
     outline: none;
-    background-color: $color-green;
+    background-color: green;
     border-radius: 8px;
     margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .hello-world-text {
-    padding: 30px;
     max-width: 400px;
     margin: auto;
+    margin-top: 16px;
     color: $color-green;
+    text-align: center;
 }

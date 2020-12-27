@@ -1,0 +1,12 @@
+$color-green: green;
+$color-white: white;
+
+.heading {
+    padding: 20px;
+    color: $color-white;
+    background-color: $color-green;
+    border-radius: 8px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
