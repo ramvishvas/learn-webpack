@@ -4,9 +4,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        programmer: './src/programmer.js',
+    },
     output: {
-        filename: 'bundle.[contenthash].js',
+        filename: '[name].[contenthash].js',
         // path: './dist',
         path: path.resolve(__dirname, 'dist'),
         // prefix to the assets
@@ -47,7 +50,7 @@ module.exports = {
         ],
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: 'style.[contenthash].css' }),
+        new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: 'index.html',
