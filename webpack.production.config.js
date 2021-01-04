@@ -55,6 +55,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'index.html',
             filename: 'index.html',
+            chunks: ['index'],
+            minify: false,
+        }),
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            filename: 'programmer.html',
+            chunks: ['programmer'],
+            minify: false,
         }),
     ],
 };
